@@ -93,7 +93,7 @@ pipeline {
 	stage("Trigger CD Pipeline") {
           steps {
                 script {
-                    sh "curl -v -k --user naveen:${JENKINS_API_TOKEN} -X POST -H 'cache-control: no-cache' -H 'content-type: application/x-www-form-urlencoded' --data 'IMAGE_TAG=${IMAGE_TAG}' 'ec2-13-127-96-74.ap-south-1.compute.amazonaws.com:8080/job/Automation-CD/buildWithParameters?token=gitops-token'"
+                    sh "curl -v -k --user naveen:${JENKINS_API_TOKEN} -X POST -H 'cache-control: no-cache' -H 'content-type: application/x-www-form-urlencoded' --data 'IMAGE_TAG=${IMAGE_TAG}' 'ec2-65-0-177-74.ap-south-1.compute.amazonaws.com:8080/job/Automation-CD/buildWithParameters?token=gitops-token'"
                 }
             }
        }
